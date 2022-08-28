@@ -35,7 +35,9 @@ end)
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+if not beautiful.init(require("theme")) then
+    beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+end
 
 -- This is used later as the default terminal and editor to run.
 local terminal = "xterm"
