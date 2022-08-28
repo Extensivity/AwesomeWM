@@ -1,0 +1,18 @@
+{
+    "[lua]": {
+        "editor.rulers": [
+            72,
+            80
+        ]
+    },
+    "Lua.diagnostics.enable": true,
+    "Lua.workspace.library": [
+        "/usr/share/awesome/lib",
+    ],
+    "Lua.diagnostics.globals": [
+        "awesome",
+        "tag",
+        "screen",
+        "client"
+    ]
+}
