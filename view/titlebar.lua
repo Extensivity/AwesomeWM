@@ -2,15 +2,14 @@ local awful = require("awful")
 local wibox = require("wibox")
 
 local function move_client(c)
-    return
-        function()
-            c:activate{context = "titlebar", action = "mouse_move"}
-        end
+    return function()
+        c:activate { context = "titlebar", action = "mouse_move" }
+    end
 end
 
 local function resize_client(c)
     return function()
-        c:activate{context = "titlebar", action = "mouse_resize"}
+        c:activate { context = "titlebar", action = "mouse_resize" }
     end
 end
 

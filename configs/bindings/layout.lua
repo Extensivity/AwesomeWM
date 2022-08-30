@@ -20,7 +20,7 @@ local function select_layout(idx)
     if t then t.layout = t.layouts[idx] or t.layout end
 end
 
-awful.keyboard.append_global_keybindings({
+awful.keyboard.append_global_keybindings {
     awful.key {
         description = "increase master width factor",
         key = "l",
@@ -76,4 +76,4 @@ awful.keyboard.append_global_keybindings({
         on_press = select_layout,
         group = "layout"
     }
-})
+}

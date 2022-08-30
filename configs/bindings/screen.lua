@@ -5,7 +5,7 @@ local function inc_focus(inc)
     return function() awful.screen.focus_relative(inc) end
 end
 
-awful.keyboard.append_global_keybindings({
+awful.keyboard.append_global_keybindings {
     awful.key {
         description = "focus the next screen",
         key = "j",
@@ -20,4 +20,4 @@ awful.keyboard.append_global_keybindings({
         group = "screen"
     }
 
-})
+}

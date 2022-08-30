@@ -27,7 +27,7 @@ local function toggle_view_focus_on_tag(idx)
     end
 end
 
-awful.keyboard.append_global_keybindings({
+awful.keyboard.append_global_keybindings {
     awful.key {
         description = "view previous",
         key = "Left",
@@ -71,4 +71,4 @@ awful.keyboard.append_global_keybindings({
         on_press = toggle_view_focus_on_tag,
         group = "tag"
     }
-})
+}

@@ -15,7 +15,7 @@ local function run_prompt()
 end
 
 -- General Awesome keys
-awful.keyboard.append_global_keybindings({
+awful.keyboard.append_global_keybindings {
     awful.key {
         description = "show help",
         key = "s",
@@ -47,4 +47,4 @@ awful.keyboard.append_global_keybindings({
         on_press = run_prompt,
         group = "awesome"
     }
-})
+}

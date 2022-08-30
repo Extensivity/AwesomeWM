@@ -19,7 +19,7 @@ ruled.client.connect_signal("request::rules", function()
     ruled.client.append_rule {
         id = "floating",
         rule_any = {
-            instance = {"copyq", "pinentry"},
+            instance = { "copyq", "pinentry" },
             class = {
                 "Arandr", "Blueman-manager", "Gpick", "Kruler", "Sxiv",
                 "Tor Browser", "Wpa_gui", "veromix", "xtightvncviewer"
@@ -35,21 +35,21 @@ ruled.client.connect_signal("request::rules", function()
                 "pop-up" -- e.g. Google Chrome's (detached) Developer Tools.
             }
         },
-        properties = {floating = true}
+        properties = { floating = true }
     }
 
     -- Add titlebars to normal clients and dialogs
     ruled.client.append_rule {
         id = "titlebars",
-        rule_any = {type = {"normal", "dialog"}},
-        properties = {titlebars_enabled = true}
+        rule_any = { type = { "normal", "dialog" } },
+        properties = { titlebars_enabled = true }
     }
 end)
 
-ruled.notification.connect_signal('request::rules', function()
+ruled.notification.connect_signal("request::rules", function()
     -- All notifications will match this rule.
     ruled.notification.append_rule {
         rule = {},
-        properties = {screen = awful.screen.preferred, implicit_timeout = 5}
+        properties = { screen = awful.screen.preferred, implicit_timeout = 5 }
     }
 end)

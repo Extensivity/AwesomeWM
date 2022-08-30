@@ -12,7 +12,7 @@ end
 
 local function unminimize()
     local c = awful.client.restore()
-    if c then c:activate{raise = true, context = "key.unminimize"} end
+    if c then c:activate { raise = true, context = "key.unminimize" } end
 end
 
 local function swap_client_byidx(idx)
@@ -49,7 +49,7 @@ local function toggle_maximize_horizontally(c)
     c:raise()
 end
 
-awful.keyboard.append_global_keybindings({
+awful.keyboard.append_global_keybindings {
     awful.key {
         description = "focus next by index",
         key = "j",
@@ -93,10 +93,10 @@ awful.keyboard.append_global_keybindings({
         on_press = awful.client.urgent.jumpto,
         group = "client"
     }
-})
+}
 
 client.connect_signal("request::default_keybindings", function()
-    awful.keyboard.append_client_keybindings({
+    awful.keyboard.append_client_keybindings {
         awful.key {
             description = "toggle fullscreen",
             modifiers = modifier.modkey,
@@ -158,5 +158,5 @@ client.connect_signal("request::default_keybindings", function()
             on_press = toggle_maximize_horizontally,
             group = "client"
         }
-    })
+    }
 end)
