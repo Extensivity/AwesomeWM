@@ -9,8 +9,5 @@ naughty.connect_signal("request::display_error", function(message, startup)
     }
 end)
 
-naughty.connect_signal("request::display", function(n)
-    naughty.layout.box {
-        notification = n
-    }
-end)
+naughty.connect_signal("request::display",
+                       function(n) naughty.layout.box {notification = n} end)
