@@ -11,11 +11,9 @@ local function show_hotkeys()
 end
 
 local awesomemenu = {
-    {"hotkeys", show_hotkeys},
-    {"manual", terminal_cmd .. "man awesome"},
+    {"hotkeys", show_hotkeys}, {"manual", terminal_cmd .. "man awesome"},
     {"edit config", editor_cmd .. awesome.conffile},
-    {"restart", awesome.restart},
-    {"quit", awesome.quit}
+    {"restart", awesome.restart}, {"quit", awesome.quit}
 }
 
 return awful.menu({

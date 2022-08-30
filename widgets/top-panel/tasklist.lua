@@ -1,22 +1,13 @@
 local awful = require("awful")
 
 local function activate_client(c)
-    c:activate {
-        context = "tasklist",
-        action = "toggle_minimization"
-    }
+    c:activate{context = "tasklist", action = "toggle_minimization"}
 end
 
-local function show_client_list()
-    awful.menu.client_list {
-        theme = { width = 250 }
-    }
-end
+local function show_client_list() awful.menu.client_list {theme = {width = 250}} end
 
 local function focus_client_by_idx(idx)
-    return function()
-        awful.client.focus.byidx(idx)
-    end
+    return function() awful.client.focus.byidx(idx) end
 end
 
 return function(s)

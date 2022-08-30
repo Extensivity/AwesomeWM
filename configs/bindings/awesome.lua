@@ -3,9 +3,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local modifier = require("configs.bindings.modifiers")
 local mymainmenu = require("widgets.menu")
 
-local function show_mainmenu()
-    mymainmenu:show()
-end
+local function show_mainmenu() mymainmenu:show() end
 
 local function run_prompt()
     awful.prompt.run {
@@ -24,33 +22,29 @@ awful.keyboard.append_global_keybindings({
         modifiers = modifier.modkey,
         on_press = hotkeys_popup.show_help,
         group = "awesome"
-    },
-    awful.key {
+    }, awful.key {
         description = "show main menu",
         key = "w",
         modifiers = modifier.modkey,
         on_press = show_mainmenu,
         group = "awesome"
-    },
-    awful.key {
+    }, awful.key {
         description = "reload awesome",
         key = "r",
         modifiers = modifier.mod_ctrl,
         on_press = awesome.restart,
-        group = "awesome",
-    },
-    awful.key {
+        group = "awesome"
+    }, awful.key {
         description = "quit awesome",
         key = "q",
         modifiers = modifier.mod_shift,
         on_press = awesome.quit,
         group = "awesome"
-    },
-    awful.key {
+    }, awful.key {
         description = "lua execute prompt",
         key = "x",
         modifiers = modifier.modkey,
         on_press = run_prompt,
         group = "awesome"
-    },
+    }
 })
