@@ -7,7 +7,6 @@ local mylayoutbox = require("widgets.top-panel.layout")
 local mytaglist = require("widgets.top-panel.taglist")
 local mytasklist = require("widgets.top-panel.tasklist")
 
-
 screen.connect_signal("request::desktop_decoration", function(s)
     s.mypromptbox = mypromptbox()
     s.mylayoutbox = mylayoutbox(s)

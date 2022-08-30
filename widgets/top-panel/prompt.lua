@@ -1,5 +1,3 @@
 local awful = require("awful")
 
-return function()
-    return awful.widget.prompt()
-end
+return function() return awful.widget.prompt() end

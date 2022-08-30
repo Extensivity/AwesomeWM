@@ -1,28 +1,18 @@
 local awful = require("awful")
 local modifier = require("configs.bindings.modifiers")
 
-local function view_tag(t)
-    t:view_only(t)
-end
+local function view_tag(t) t:view_only(t) end
 
-local function view_next_tag(t)
-    awful.tag.viewnext(t.screen)
-end
+local function view_next_tag(t) awful.tag.viewnext(t.screen) end
 
-local function view_prev_tag(t)
-    awful.tag.viewprev(t.screen)
-end
+local function view_prev_tag(t) awful.tag.viewprev(t.screen) end
 
 local function move_client_to_tag(t)
-    if client.focus then
-        client.focus:move_to_tag(t)
-    end
+    if client.focus then client.focus:move_to_tag(t) end
 end
 
 local function toggle_client_on_tag(t)
-    if client.focus then
-        client.focus:toggle_tag(t)
-    end
+    if client.focus then client.focus:toggle_tag(t) end
 end
 
 return function(s)

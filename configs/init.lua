@@ -9,7 +9,6 @@ end
 
 menubar.utils.terminal = apps.terminal
 
-
 require("configs.layouts")
 require("configs.taglist")
 require("configs.bindings")
