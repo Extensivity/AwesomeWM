@@ -21,51 +21,19 @@ local function sloppy_focus(c) c:activate {
 end
 
 awful.mouse.append_global_mousebindings {
-    awful.button {
-        modifiers = modifier.none,
-        key = 3,
-        on_press = toggle_mainmenu,
-        description = "show main menu",
-        group = "mouse"
-    }, awful.button {
-        modifiers = modifier.none,
-        key = 4,
-        on_press = awful.tag.viewprev,
-        description = "view previous tag",
-        group = "mouse"
-    }, awful.button {
-        modifiers = modifier.none,
-        key = 5,
-        on_press = awful.tag.viewnext,
-        description = "view next tag",
-        group = "mouse"
-    }
+    awful.button({}, 3, toggle_mainmenu),
+    awful.button({}, 4, awful.tag.viewprev),
+    awful.button({}, 5, awful.tag.viewnext),
 }
 
 client.connect_signal("request::default_mousebindings", function()
     awful.mouse.append_client_mousebindings {
-        awful.button {
-            modifiers = modifier.none,
-            key = 1,
-            on_press = click_client,
-            description = "click client"
-            -- group = "mouse"
-        }, awful.button {
-            modifiers = modifier.modkey,
-            key = 1,
-            on_press = move_client,
-            description = "move client",
-            group = "mouse"
-        }, awful.button {
-            modifiers = modifier.modkey,
-            key = 3,
-            on_press = resize_client,
-            description = "resize client",
-            group = "mouse"
-        }
+        awful.button(modifier.none, 1, click_client),
+        awful.button(modifier.modkey, 1, move_client),
+        awful.button(modifier.modkey, 3, resize_client),
     }
 end)
 
 -- Didn't know where else to put this.
 -- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", sloppy_focus)
+-- client.connect_signal("mouse::enter", sloppy_focus)
