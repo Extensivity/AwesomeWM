@@ -52,4 +52,6 @@ client.connect_signal("request::titlebars", function(c)
         section.right,
         layout = wibox.layout.align.horizontal
     }
+
+    if c.requests_no_titlebar then awful.titlebar.hide(c) end
 end)

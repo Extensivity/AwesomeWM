@@ -134,6 +134,12 @@ client.connect_signal("request::default_keybindings", function()
             on_press = keep_on_top,
             group = "client"
         }, awful.key {
+            description = "toggle titlebar",
+            key = "t",
+            modifiers = modifier.mod_shift,
+            on_press = awful.titlebar.toggle,
+            group = "client"
+        }, awful.key {
             description = "minimize",
             key = "n",
             modifiers = modifier.modkey,

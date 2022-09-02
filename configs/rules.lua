@@ -77,7 +77,7 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule = { class = "Steam" },
-        properties = { screen = 2, tag = "42" }
+        properties = { screen = 2, tag = "4" }
     }
 end)
 
