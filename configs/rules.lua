@@ -44,6 +44,41 @@ ruled.client.connect_signal("request::rules", function()
         rule_any = { type = { "normal", "dialog" } },
         properties = { titlebars_enabled = true }
     }
+
+    ruled.client.append_rule {
+        rule_any = {
+            class = {
+                "Steam",
+                "discord",
+                "[Ss]potify"
+            }
+        },
+        properties = {
+            maximized_vertical = true,
+            maximized_horizontal = true
+        }
+    }
+
+    ruled.client.append_rule {
+        rule = { class = "discord" },
+        properties = { screen = 2, tag = "2" }
+    }
+
+    -- This rule doesn't work until Spotify fixes it themselves.
+    -- Currently, it doesn't assign the classname until just before
+    -- it becomes visible. Unfortunally AwesomeWM ruled only applies
+    -- when that information is grabbed, aka when an application is
+    -- launched or when AwesomeWM restarts.
+    -- https://stackoverflow.com/a/39319003
+    ruled.client.append_rule {
+        rule = { class = "[Ss]potify" },
+        properties = { screen = 2, tag = "3" }
+    }
+
+    ruled.client.append_rule {
+        rule = { class = "Steam" },
+        properties = { screen = 2, tag = "42" }
+    }
 end)
 
 ruled.notification.connect_signal("request::rules", function()
