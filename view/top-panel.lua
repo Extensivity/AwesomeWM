@@ -6,12 +6,22 @@ local mypromptbox = require("widgets.top-panel.prompt")
 local mylayoutbox = require("widgets.top-panel.layout")
 local mytaglist = require("widgets.top-panel.taglist")
 local mytasklist = require("widgets.top-panel.tasklist")
+local mynetwork = require("widgets.top-panel.network.wireless")
+
+
+local mywidgets = {
+    network = mynetwork {
+        interface = "wlan0",
+        font = "sans mono 8"
+    }
+}
 
 screen.connect_signal("request::desktop_decoration", function(s)
     s.mypromptbox = mypromptbox()
     s.mylayoutbox = mylayoutbox(s)
     s.mytaglist = mytaglist(s)
     s.mytasklist = mytasklist(s)
+
 
     local section = {
         left = {
@@ -26,6 +36,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         right = {
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
+            mywidgets.network,
             mytextclock,
             s.mylayoutbox
         }
