@@ -36,4 +36,4 @@ end)
 
 -- Didn't know where else to put this.
 -- Enable sloppy focus, so that focus follows mouse.
--- client.connect_signal("mouse::enter", sloppy_focus)
+client.connect_signal("mouse::enter", sloppy_focus)
