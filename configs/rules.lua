@@ -61,7 +61,7 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule = { class = "discord" },
-        properties = { screen = 2, tag = "2" }
+        properties = { screen = 2, tag = "Discord" }
     }
 
     -- This rule doesn't work until Spotify fixes it themselves.
@@ -72,12 +72,12 @@ ruled.client.connect_signal("request::rules", function()
     -- https://stackoverflow.com/a/39319003
     ruled.client.append_rule {
         rule = { class = "[Ss]potify" },
-        properties = { screen = 2, tag = "3" }
+        properties = { screen = 2, tag = "Spotify" }
     }
 
     ruled.client.append_rule {
         rule = { class = "Steam" },
-        properties = { screen = 2, tag = "4" }
+        properties = { screen = 2, tag = "Steam" }
     }
 end)
 

@@ -1,4 +1,5 @@
 require("awful.autofocus")
+require("view.taglist")
 require("view.wallpaper")
 require("view.top-panel")
 require("view.titlebar")
