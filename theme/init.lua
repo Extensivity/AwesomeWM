@@ -58,7 +58,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_submenu_icon = themes_path .. "submenu.png"
+theme.menu_submenu_icon = themes_path .. "icons/submenu.png"
 theme.menu_height = dpi(15)
 theme.menu_width = dpi(100)
 
@@ -112,7 +112,7 @@ theme.titlebar_maximized_button_normal_active = themes_path ..
 theme.titlebar_maximized_button_focus_active = themes_path ..
     "titlebar/maximized_focus_active.png"
 
-theme.wallpaper = themes_path .. "background.png"
+theme.wallpaper = themes_path .. "wallpapers/awesome_black.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "layouts/fairhw.png"
