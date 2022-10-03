@@ -1,5 +1,6 @@
 local ruled = require("ruled")
 local awful = require("awful")
+local taglist = require("configs.taglist")
 
 ruled.client.connect_signal("request::rules", function()
     -- All clients will match this rule.
@@ -61,9 +62,9 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule = { class = "discord" },
-        properties = { screen = 2, tag = "Discord" }
+        properties = { screen = 2, tag = taglist.secondary.tag_names[2] }
     }
-
+    
     -- This rule doesn't work until Spotify fixes it themselves.
     -- Currently, it doesn't assign the classname until just before
     -- it becomes visible. Unfortunally AwesomeWM ruled only applies
@@ -72,12 +73,12 @@ ruled.client.connect_signal("request::rules", function()
     -- https://stackoverflow.com/a/39319003
     ruled.client.append_rule {
         rule = { class = "[Ss]potify" },
-        properties = { screen = 2, tag = "Spotify" }
+        properties = { screen = 2, tag = taglist.secondary.tag_names[3] }
     }
-
+    
     ruled.client.append_rule {
         rule = { class = "Steam" },
-        properties = { screen = 2, tag = "Steam" }
+        properties = { screen = 2, tag = taglist.secondary.tag_names[4] }
     }
 end)
 
