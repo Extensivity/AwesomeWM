@@ -1,0 +1,6 @@
+#!/bin/bash
+
+xdg_menu \
+    --format awesome \
+    --root-menu $XDG_CONFIG_HOME/xdg-menu/arch-applications.menu \
+    > $XDG_CONFIG_HOME/awesome/libs/xdgmenu.lua.orig

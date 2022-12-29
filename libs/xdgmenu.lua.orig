@@ -113,7 +113,7 @@ local System_Tools = {
     { "ClamTk", "clamtk ", "/usr/share/pixmaps/clamtk.png" },
 }
 
-return {
+xdgmenu = {
     { "Accessories", Accessories },
     { "Education", Education },
     { "Games", Games },
